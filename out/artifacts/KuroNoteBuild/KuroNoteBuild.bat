@@ -1,0 +1,1 @@
+java -jar C:\intellijCodeRepository\KuroNote\out\artifacts\KuroNoteBuild\KuroNoteBuild.jar
