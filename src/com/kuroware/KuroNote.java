@@ -35,28 +35,28 @@ public class KuroNote {
         System.out.println("    [0.3] Intellij Create .jar & .bat files                      ||    [6.4] Functional Interfaces & Anonymous Inner Class");
         System.out.println("    [0.4] Comments                                               ||    [6.5] Lambda Expressions");
         System.out.println("    [0.5] Naming Conventions                                     ||    [6.6] Keyword: instanceof");
-        System.out.println("    [0.6] Unicode                                                || Chapter 7: Exception Handling, Blank & Blank");
-        System.out.println("Chapter 1: Java Fundamentals                                     ||    [7.1] Try {} Catch {}");
-        System.out.println("    [1.1] Primitive Type (Domain, Range & Memory)                ||    [7.2] Blank");
-        System.out.println("    [1.2] Remainder Operator (%)(Modulo)                         ||    [7.3] Blank");
-        System.out.println("    [1.3] String : Escape Sequences                              ||");
-        System.out.println("    [1.4] String : Methods                                       ||");
-        System.out.println("    [1.5] String : Parse && Formatting                           ||");
-        System.out.println("    [1.6] Scanner : Console input                                ||");
-        System.out.println("    [1.7] Casting Types                                          ||");
-        System.out.println("    [1.8] Math.* : Random()                                      ||");
-        System.out.println("    [1.9] Math.* : Static Methods                                ||");
-        System.out.println("Chapter 2: Expressions, Statements and Methods                   ||");
+        System.out.println("    [0.6] Unicode                                                || Chapter 7: Reading & Writing Files  ");
+        System.out.println("Chapter 1: Java Fundamentals                                     ||    [7.1] File Systems Overview");
+        System.out.println("    [1.1] Primitive Type (Domain, Range & Memory)                ||    [7.2] Text File Writing (.txt)");
+        System.out.println("    [1.2] Remainder Operator (%)(Modulo)                         ||    [7.3] Text File Reading (.txt)");
+        System.out.println("    [1.3] String : Escape Sequences                              ||    [7.4] Binary File Writing (.dat)");
+        System.out.println("    [1.4] String : Methods                                       ||    [7.5] Binary File Reading (.dat)");
+        System.out.println("    [1.5] String : Parse && Formatting                           ||    [7.6] Random Access File Writing (.dat)");
+        System.out.println("    [1.6] Scanner : Console input                                ||    [7.7] Random Access File Reading (.dat)");
+        System.out.println("    [1.7] Casting Types                                          ||    [7.8] Object File Writing (Serialization)(.dat)");
+        System.out.println("    [1.8] Math.* : Random()                                      ||    [7.9] Object File Reading (Deserialization)(.dat)");
+        System.out.println("    [1.9] Math.* : Static Methods                                || Chapter 8: ");
+        System.out.println("Chapter 2: Expressions, Statements and Methods                   ||    [8.1] ");
         System.out.println("    [2.1] Methods                                                ||");
         System.out.println("    [2.2] While, For & Do                                        ||");
         System.out.println("    [2.3] Switch Statement                                       ||");
         System.out.println("    [2.4] Method Overloading                                     ||");
         System.out.println("    [2.5] Method Example : sumDigits()                           ||");
-        System.out.println("Chapter 3: GUI && Files                                          ||");
+        System.out.println("Chapter 3: GUI & JavaFX                                          ||");
         System.out.println("    [3.1] JavaFX                                                 ||");
         System.out.println("    *[3.2] GUI                                                   ||");
-        System.out.println("    [3.3] File Reading                                           ||");
-        System.out.println("    [3.4] File Writing                                           ||");
+        System.out.println("    *[3.3] SceneBuilder                                          ||");
+        System.out.println("    [3.4]                                                        ||");
         System.out.println("Chapter 4: Object Oriented Programming                           ||");
         System.out.println("    [4.1] Classes                                                ||");
         System.out.println("    [4.2] Class Vs Instance Vs Object Vs Reference               ||");
@@ -65,7 +65,7 @@ public class KuroNote {
         System.out.println("    [4.5] This Vs Super                                          ||");
         System.out.println("    [4.6] Method Overriding                                      ||");
         System.out.println("    [4.7] Inheritance                                            ||");
-        System.out.println("    *[4.8] Static Vs Instance, Methods & Variables               ||");
+        System.out.println("    [4.8] Try {} Catch {}                                        ||");
         System.out.println("    [4.9] Access Modifiers                                       ||");
         System.out.println("Chapter 5: Array, Java inbuilt Lists, Auto/Unboxing              ||");
         System.out.println("    [5.1] Array Information                                      ||");
@@ -190,7 +190,6 @@ public class KuroNote {
             section3_4();
         }
 
-
         // 4.X
         else if (userNumber == 4.1) {
             section4_1();
@@ -270,6 +269,36 @@ public class KuroNote {
         else if (userNumber == 7.1) {
             section7_1();
         }
+        else if (userNumber == 7.2) {
+            section7_2();
+        }
+        else if (userNumber == 7.3) {
+            section7_3();
+        }
+        else if (userNumber == 7.4) {
+            section7_4();
+        }
+        else if (userNumber == 7.5) {
+            section7_5();
+        }
+        else if (userNumber == 7.6) {
+            section7_6();
+        }
+        else if (userNumber == 7.7) {
+            section7_7();
+        }
+        else if (userNumber == 7.8) {
+            section7_8();
+        }
+        else if (userNumber == 7.9) {
+            section7_9();
+        }
+
+        // 8.X
+        else if(userNumber == 8.1){
+            section8_1();
+        }
+
 
         //NA
         else {
@@ -286,7 +315,6 @@ public class KuroNote {
         //Load Title "CHAPTER X, SECTION X : XXX"
         int chapterNumber = (int) userNumber;
         int sectionNumber = (int) ((userNumber * 10) % 10);
-        System.out.println("------------------------------------------------------------------------------------------------------------------------------");
         System.out.println("------------------------------------------------------------------------------------------------------------------------------");
         System.out.println("CHAPTER " + chapterNumber + " SECTION " + sectionNumber);
         System.out.println("------------------------------------------------------------------------------------------------------------------------------");
@@ -1100,112 +1128,10 @@ public class KuroNote {
 
     }
     private static void section3_3() {
-        System.out.println("File Reading");
-        System.out.println("---------------------------------------------------------------");
-        System.out.println("---Location---");
-        System.out.println("Scanner input = new Scanner(new File(\"data/readme.txt\"));");
-        System.out.println("//If our program is in A:/hw6");
-        System.out.println("//Scanner will look for A:/hw6/data/readme.txt");
-        System.out.println();
-        System.out.println("Scanner input = new Scanner(new File(\"src/Kuroware/CS210/FileProcessingEx/Data/student.txt\"));");
-        System.out.println("//If our program is in C:/intellijCodeRepository/KuroKage/src/Kuroware/CS210/FileProcessingEx");
-        System.out.println("//Scanner will look for C:/intellijCodeRepository/KuroKage/src/Kuroware/CS210/FileProcessingEx/Data/student.txt");
-        System.out.println();
-        System.out.println("---Throws clause---");
-        System.out.println("public static typename (params) throws type {");
-        System.out.println("public static void main(String[] args) throws FileNotFoundException {");
-        System.out.println("Similar to saying, \"I hereby announce that this method might throw an exception, and I accept the consequences if this happens.\"");
-        System.out.println();
-        System.out.println("---Input Tokens---");
-        System.out.println("Token: A unit of user input, separated by whitespace. ");
-        System.out.println("(A Scanner splits a file's contents into tokens.)");
-        System.out.println("If an input file contains the following:    23   3.14  \"John Smith\"");
-        System.out.println("Then the Scanner can interpret the tokens as the following types:");
-        System.out.println("    Token    | Types");
-        System.out.println("    --------------");
-        System.out.println("    23       | int, double, String");
-        System.out.println("    3.14     | double, String");
-        System.out.println("    \"John    | String");
-        System.out.println("    Smith\"   | String");
 
-        System.out.println("                // Counts the words on each line of a file\n" +
-                "        Scanner input = new Scanner(new File(\"input.txt\"));\n" +
-                "        while (input.hasNextLine()) {\n" +
-                "            String line = input.nextLine();\n" +
-                "            Scanner lineScan = new Scanner(line);\n" +
-                "\n" +
-                "            // process the contents of this line\n" +
-                "            int count = 0;\n" +
-                "            while (lineScan.hasNext()) {\n" +
-                "                String word = lineScan.next();\n" +
-                "                count++;\n" +
-                "            }\n" +
-                "            System.out.println(\"Line has \" + count + \" words\");\n" +
-                "        }");
-        System.out.println("-----");
-        System.out.println("Do not open the same file for both reading (Scanner)\u000Band writing (PrintStream) at the same time.\n" +
-                "You will overwrite your input file with an empty file (0 bytes).\n");
-        //We can ask the user to tell us the file to read.
-        //System.out.print("Type a file name to use: ");
-        //String filename = console.nextLine();
-        //Scanner input = new Scanner(new File(filename));
-
-        //Files have an exists method to test for file-not-found:
-        //File file = new File("hours.txt");
-        //
-        //if (!file.exists()) {
-        //    // try a second input file as a backup
-        //    System.out.print("hours file not found!");
-        //    file = new File("hours2.txt");
-        //}
     }
     private static void section3_4() {
-        System.out.println("File Writing");
-        System.out.println("---------------------------------------------------------------");
-        System.out.println("--- JDK 1.0 ---");
-        System.out.println("*PrintStream is an object in the java.io package that lets you print output to a destination such as a file.*");
-        System.out.println("Constructor = PrintStream(OutputStream out, boolean autoFlush, String charsetName)");
-        System.out.println("    - Any methods you have used on System.out (such as print, println) will work on a PrintStream.");
-        System.out.println("    - If the given file does not exist, it is created.");
-        System.out.println("    - If the given file already exists, it is overwritten.");
-        System.out.println("    - Do not open the same file for both reading (Scanner) and writing (PrintStream) at the same time.");
-        System.out.println("        - You will overwrite your input file with an empty file (0 bytes).");
-        System.out.println();
-        System.out.println("    EX:");
-        System.out.println("PrintStream output = new PrintStream(new File(\"out.txt\"));\n" +
-                "output.println(\"Hello, file!\");\n" +
-                "output.println(\"This is a second line of output.\");\n");
-        System.out.println();
-        System.out.println("//The console output object, System.out, is a PrintStream.");
-        System.out.println("PrintStream out1 = System.out;\n" +
-                "PrintStream out2 = new PrintStream(new File(\"data.txt\"));\n" +
-                "out1.println(\"Hello, console!\");   // goes to console\n" +
-                "out2.println(\"Hello, file!\");      // goes to file\n");
-        System.out.println();
-        System.out.println("--- JDK 1.1 ---");
-        System.out.println("*PrintWriter is an object in the java.io package, similar to PrintStream.*");
-        System.out.println("Constructor = PrintWriter(Writer wr) && PrintWriter(Writer wr, boolean autoFlush)");
-        System.out.println("    - Any methods you have used on System.out (such as print, println) will work on a PrintWriter.");
-        System.out.println("    - writer.printf() & writer.format() are the same thing");
-        System.out.println("    - As a general rule:  ");
-        System.out.println("        -If you're writing binary (or mixed) data use OutputStream instances.");
-        System.out.println("        -If you're writing character data, use Writer instances.");
-        System.out.println();
-        System.out.println("    EX:");
-        System.out.println("private static void WriteFile() throws FileNotFoundException {\n" +
-                "    int[] numbers = { 10, 20, 30, 40, 50 };\n" +
-                "\n" +
-                "    // Open the file.\n" +
-                "    PrintWriter outputFile = new PrintWriter(\"src/ArrayPractice/Values.txt\");\n" +
-                "\n" +
-                "    // Write the array elements to the file.\n" +
-                "    for (int index = 0; index < numbers.length; index++){\n" +
-                "        outputFile.println(numbers[index]);\n" +
-                "    }\n" +
-                "\n" +
-                "    // Close the file.\n" +
-                "    outputFile.close();\n" +
-                "}");
+
     }
 
     //CHAPTER 4
@@ -1576,7 +1502,7 @@ public class KuroNote {
 
     }
     private static void section4_8() {
-        System.out.println("Static Vs Instance, Methods & Variables");
+        System.out.println("Try & Catch Statements");
         System.out.println("----------------------------------------");
 
     }
@@ -2283,11 +2209,409 @@ public class KuroNote {
 
     //CHAPTER 7
     private static void section7_1(){
-        System.out.println("Try & Catch Statements");
+        System.out.println("File Systems Overview");
         System.out.println("----------------------------------------");
+        System.out.println("---------- Text File ----------");
+        System.out.println();
+        System.out.println("--- Write ---");
+        System.out.println("PrintWriter outputFile = new PrintWriter(\"textFileName.txt\");");
+        System.out.println();
+        System.out.println("--- Read ---");
+        System.out.println("Scanner inputFile = new Scanner(new File(\"textFileName.txt\"));");
+        System.out.println();
+        System.out.println("---------- Binary File ----------");
+        System.out.println();
+        System.out.println("--- Write ---");
+        System.out.println("FileOutputStream outStream = new FileOutputStream(\"binaryFileName.dat\");");
+        System.out.println("DataOutputStream outputFile = new DataOutputStream(outStream);");
+        System.out.println();
+        System.out.println("--- Read ---");
+        System.out.println("FileInputStream inStream = new FileInputStream(\"binaryFileName.dat\");");
+        System.out.println("DataInputStream inputFile = new DataInputStream(inStream);");
+        System.out.println();
+        System.out.println("---------- Random Access File ----------");
+        System.out.println();
+        System.out.println("--- Write ---");
+        System.out.println("RandomAccessFile randomFile = new RandomAccessFile(\"randomAccessName.dat\", \"rw\");");
+        System.out.println();
+        System.out.println("--- Read ---");
+        System.out.println("RandomAccessFile randomFile = new RandomAccessFile(\"randomAccessName.dat\", \"r\");");
+        System.out.println();
+        System.out.println("---------- Serializable File ----------");
+        System.out.println();
+        System.out.println("--- Write ---");
+        System.out.println("FileOutputStream outStream = new FileOutputStream(\"serializedFileName.dat\");");
+        System.out.println("ObjectOutputStream objectOutputFile = new ObjectOutputStream(outStream);");
+        System.out.println();
+        System.out.println("--- Read ---");
+        System.out.println("FileInputStream inStream = new FileInputStream(\"serializedFileName.dat\");");
+        System.out.println("ObjectInputStream objectInputFile = new ObjectInputStream(inStream);");
+        System.out.println();
+    }
+    private static void section7_2(){
+        System.out.println("Text File Writing (.txt)");
+        System.out.println("----------------------------------------");
+        System.out.println("--- JDK 1.0 ---");
+        System.out.println("*PrintStream is an object in the java.io package that lets you print output to a destination such as a file.*");
+        System.out.println("Constructor = PrintStream(OutputStream out, boolean autoFlush, String charsetName)");
+        System.out.println("    - Any methods you have used on System.out (such as print, println) will work on a PrintStream.");
+        System.out.println("    - If the given file does not exist, it is created.");
+        System.out.println("    - If the given file already exists, it is overwritten.");
+        System.out.println("    - Do not open the same file for both reading (Scanner) and writing (PrintStream) at the same time.");
+        System.out.println("        - You will overwrite your input file with an empty file (0 bytes).");
+        System.out.println();
+        System.out.println("    EX:");
+        System.out.println("PrintStream output = new PrintStream(new File(\"out.txt\"));\n" +
+                "output.println(\"Hello, file!\");\n" +
+                "output.println(\"This is a second line of output.\");\n");
+        System.out.println();
+        System.out.println("//The console output object, System.out, is a PrintStream.");
+        System.out.println("PrintStream out1 = System.out;\n" +
+                "PrintStream out2 = new PrintStream(new File(\"data.txt\"));\n" +
+                "out1.println(\"Hello, console!\");   // goes to console\n" +
+                "out2.println(\"Hello, file!\");      // goes to file\n");
+        System.out.println();
+        System.out.println("--- JDK 1.1 ---");
+        System.out.println("*PrintWriter is an object in the java.io package, similar to PrintStream.*");
+        System.out.println("Constructor = PrintWriter(Writer wr) && PrintWriter(Writer wr, boolean autoFlush)");
+        System.out.println("    - Any methods you have used on System.out (such as print, println) will work on a PrintWriter.");
+        System.out.println("    - writer.printf() & writer.format() are the same thing");
+        System.out.println("    - As a general rule:  ");
+        System.out.println("        -If you're writing binary (or mixed) data use OutputStream instances.");
+        System.out.println("        -If you're writing character data, use Writer instances.");
+        System.out.println();
+        System.out.println("    EX:");
+        System.out.println("private static void WriteFile() throws FileNotFoundException {\n" +
+                "    int[] numbers = { 10, 20, 30, 40, 50 };\n" +
+                "\n" +
+                "    // Open the file.\n" +
+                "    PrintWriter outputFile = new PrintWriter(\"src/ArrayPractice/Values.txt\");\n" +
+                "\n" +
+                "    // Write the array elements to the file.\n" +
+                "    for (int index = 0; index < numbers.length; index++){\n" +
+                "        outputFile.println(numbers[index]);\n" +
+                "    }\n" +
+                "\n" +
+                "    // Close the file.\n" +
+                "    outputFile.close();\n" +
+                "}");
+    }
+    private static void section7_3(){
+        System.out.println("Text File Reading (.txt)");
+        System.out.println("----------------------------------------");
+        System.out.println("---Location---");
+        System.out.println("Scanner input = new Scanner(new File(\"data/readme.txt\"));");
+        System.out.println("//If our program is in A:/hw6");
+        System.out.println("//Scanner will look for A:/hw6/data/readme.txt");
+        System.out.println();
+        System.out.println("Scanner input = new Scanner(new File(\"src/Kuroware/CS210/FileProcessingEx/Data/student.txt\"));");
+        System.out.println("//If our program is in C:/intellijCodeRepository/KuroKage/src/Kuroware/CS210/FileProcessingEx");
+        System.out.println("//Scanner will look for C:/intellijCodeRepository/KuroKage/src/Kuroware/CS210/FileProcessingEx/Data/student.txt");
+        System.out.println();
+        System.out.println("---Throws clause---");
+        System.out.println("public static typename (params) throws type {");
+        System.out.println("public static void main(String[] args) throws FileNotFoundException {");
+        System.out.println("Similar to saying, \"I hereby announce that this method might throw an exception, and I accept the consequences if this happens.\"");
+        System.out.println();
+        System.out.println("---Input Tokens---");
+        System.out.println("Token: A unit of user input, separated by whitespace. ");
+        System.out.println("(A Scanner splits a file's contents into tokens.)");
+        System.out.println("If an input file contains the following:    23   3.14  \"John Smith\"");
+        System.out.println("Then the Scanner can interpret the tokens as the following types:");
+        System.out.println("    Token    | Types");
+        System.out.println("    --------------");
+        System.out.println("    23       | int, double, String");
+        System.out.println("    3.14     | double, String");
+        System.out.println("    \"John    | String");
+        System.out.println("    Smith\"   | String");
+        System.out.println("Create Tokens with String Method:  public String[] split(String regex, int limit)");
+        System.out.println("Ex: String[] tokens = str.split(\",\"); // \",\" = delimiter");
+        System.out.println();
+        System.out.println("         // Counts the words on each line of a file\n" +
+                "        Scanner input = new Scanner(new File(\"input.txt\"));\n" +
+                "        while (input.hasNextLine()) {\n" +
+                "            String line = input.nextLine();\n" +
+                "            Scanner lineScan = new Scanner(line);\n" +
+                "\n" +
+                "            // process the contents of this line\n" +
+                "            int count = 0;\n" +
+                "            while (lineScan.hasNext()) {\n" +
+                "                String word = lineScan.next();\n" +
+                "                count++;\n" +
+                "            }\n" +
+                "            System.out.println(\"Line has \" + count + \" words\");\n" +
+                "        }");
+        System.out.println("-----");
+        System.out.println("Do not open the same file for both reading (Scanner) and writing (PrintStream) at the same time.\n" +
+                "You will overwrite your input file with an empty file (0 bytes).\n");
+    }
+    private static void section7_4(){
+        System.out.println("Binary File Writing (.dat)");
+        System.out.println("----------------------------------------");
+        System.out.println("public class WriteBinaryFile\n" +
+                "{\n" +
+                "    public static void main(String[] args) throws IOException {\n" +
+                "        // An array to write to the file\n" +
+                "        int[] numbers = {2, 4, 6, 8, 10, 12, 14};\n" +
+                "\n" +
+                "        // Create the binary output objects.\n" +
+                "        FileOutputStream fstream = new FileOutputStream(\"src/BinaryFiles/Data/Numbers.dat\");\n" +
+                "        DataOutputStream outputFile = new DataOutputStream(fstream);\n" +
+                "        //To Append existing data use: FileOutputStream fstream = new FileOutputStream(\"src/BinaryFiles/Data/Numbers.dat\", true);\n" +
+                "        //To overwrite existing data use single parameter constructor or use: FileOutputStream fstream = new FileOutputStream(\"src/BinaryFiles/Data/Numbers.dat\", false);\n" +
+                "\n" +
+                "        System.out.println(\"Writing the numbers to the file...\");\n" +
+                "\n" +
+                "        // Write the array elements to the file.\n" +
+                "        for (int i = 0; i < numbers.length; i++) {\n" +
+                "            outputFile.writeInt(numbers[i]);\n" +
+                "        }\n" +
+                "        System.out.println(\"Done.\");\n" +
+                "\n" +
+                "        // Close the file.\n" +
+                "        outputFile.close();\n" +
+                "    }\n" +
+                "}\n" +
+                "\n" +
+                "// DataOutputStream Methods\n" +
+                "/*\n" +
+                "void close()                    Closes the file.\n" +
+                "void writeBoolean(boolean b)    Writes the boolean value passed to b to the file.\n" +
+                "void writeByte(byte b)          Writes the byte value passed to b to the file.\n" +
+                "void writeChar(int c)           This method accepts an int, which is assumed to be a character code. The character it represents is written to the file as a two-byte Unicode character.\n" +
+                "void writeDouble(double d)      Writes the double value passed to d to the file.\n" +
+                "void writeFloat(float f)        Writes the float value passed to f to the file.\n" +
+                "void writeInt(int i)            Writes the int value passed to i to the file.\n" +
+                "void writeLong(long num)        Writes the long value passed to num to the file.\n" +
+                "void writeShort(short s)        Writes the short value passed to s to the file.\n" +
+                "void writeUTF(String str)       Writes the String object passed to str to the file using the Unicode Text Format.\n" +
+                " */\n");
+    }
+    private static void section7_5(){
+        System.out.println("Binary File Reading (.dat)");
+        System.out.println("----------------------------------------");
+        System.out.println("public class ReadBinaryFile {\n" +
+                "    public static void main(String[] args) throws IOException {\n" +
+                "        int number; // A number read from the file\n" +
+                "        boolean endOfFile = false; // EOF flag\n" +
+                "\n" +
+                "        // Create the binary file input objects.\n" +
+                "        FileInputStream fstream = new FileInputStream(\"src/BinaryFiles/Data/Numbers.dat\");\n" +
+                "        DataInputStream inputFile = new DataInputStream(fstream);\n" +
+                "\n" +
+                "        System.out.println(\"Reading numbers from the file:\");\n" +
+                "\n" +
+                "        // Read the contents of the file.\n" +
+                "        while (!endOfFile)\n" +
+                "        {\n" +
+                "            try\n" +
+                "            {\n" +
+                "                number = inputFile.readInt();\n" +
+                "                System.out.print(number + \" \");\n" +
+                "            }\n" +
+                "            catch (EOFException e)\n" +
+                "            {\n" +
+                "                endOfFile = true;\n" +
+                "            }\n" +
+                "        }\n" +
+                "        System.out.println(\"Done.\");\n" +
+                "\n" +
+                "        // Close the file.\n" +
+                "        inputFile.close();\n" +
+                "    }\n" +
+                "}\n" +
+                "// DataInputStream Methods\n" +
+                "/*\n" +
+                "void close()            Closes the file.\n" +
+                "boolean readBoolean()   Reads a boolean value from the file and returns it.\n" +
+                "byte readByte()         Reads a byte value from the file and returns it.\n" +
+                "char readChar()         Reads a char value from the file and returns it. The character is expected to be stored as a two-byte Unicode character, as written by the DataOutputStream class's writeChar method.\n" +
+                "double readDouble()     Reads a double value from the file and returns it.\n" +
+                "float readFloat()       Reads a float value from the file and returns it.\n" +
+                "int readInt()           Reads an int value from the file and returns it.\n" +
+                "long readLong()         Reads a long value from the file and returns it.\n" +
+                "short readShort()       Reads a short value from the file and returns it.\n" +
+                "String readUTF()        Reads a string from the file and returns it as a String object. The string must have been written with the DataOutputStream class's writeUTF method.\n" +
+                " */");
+    }
+    private static void section7_6(){
+        System.out.println("Random Access File Writing (.dat)");
+        System.out.println("----------------------------------------");
+        System.out.println("----- CODE: -----");
+        System.out.println("public class WriteRandomLetters\n" +
+                "{\n" +
+                "    public static void main(String[] args) throws IOException\n" +
+                "    {\n" +
+                "        // The letters array has all 26 letters.\n" +
+                "        char[] letters = {\n" +
+                "                'a', 'b', 'c', 'd', 'e', 'f', 'g',\n" +
+                "                'h', 'i', 'j', 'k', 'l', 'm', 'n',\n" +
+                "                'o', 'p', 'q', 'r', 's', 't', 'u',\n" +
+                "                'v', 'w', 'x', 'y', 'z' };\n" +
+                "\n" +
+                "        System.out.println(\"Opening the file.\");\n" +
+                "\n" +
+                "        // Open a file for reading and writing.\n" +
+                "        RandomAccessFile randomFile = new RandomAccessFile(\"src/RandomAccessFiles/Data/Letters.dat\", \"rw\");\n" +
+                "\n" +
+                "        System.out.println(\"Writing data to the file...\");\n" +
+                "\n" +
+                "        // Sequentially write the letters array to the file.\n" +
+                "        for (int i = 0; i < letters.length; i++) {\n" +
+                "            randomFile.writeChar(letters[i]);\n" +
+                "        }\n" +
+                "\n" +
+                "        // Close the file.\n" +
+                "        randomFile.close();\n" +
+                "\n" +
+                "        System.out.println(\"Done.\");\n" +
+                "    }\n" +
+                "}");
+        System.out.println("----- CONSOLE: -----");
+        System.out.println("Opening the file.\n" +
+                "Writing data to the file...\n" +
+                "Done.");
+    }
+    private static void section7_7(){
+        System.out.println("Random Access File Reading (.dat)");
+        System.out.println("----------------------------------------");
+        System.out.println("----- CODE: -----");
+        System.out.println("public class ReadRandomLetters\n" +
+                "{\n" +
+                "    public static void main(String[] args) throws IOException\n" +
+                "    {\n" +
+                "        final int CHAR_SIZE = 2; // 2 byte characters\n" +
+                "        long byteNum; // The byte number\n" +
+                "        char ch; // A character from the file\n" +
+                "\n" +
+                "        // Open the file for reading.\n" +
+                "        RandomAccessFile randomFile = new RandomAccessFile(\"src/RandomAccessFiles/Data/Letters.dat\", \"r\");\n" +
+                "\n" +
+                "        // Move to the character 5. This is the 6th character from the beginning of the file.\n" +
+                "        byteNum = CHAR_SIZE * 5;\n" +
+                "        randomFile.seek(byteNum); // a b c d e| f g h i j k l m n o p q r s t u v w x y z\n" +
+                "\n" +
+                "        // Read the character stored at this location and display it. Should be the letter f.\n" +
+                "        ch = randomFile.readChar(); // a b c d e f| g h i j k l m n o p q r s t u v w x y z\n" +
+                "        System.out.println(ch);\n" +
+                "\n" +
+                "\n" +
+                "        // Move to character 10 (the 11th character), read the character, and display it. Should be the letter k.\n" +
+                "        byteNum = CHAR_SIZE * 10;\n" +
+                "        randomFile.seek(byteNum); // a b c d e f g h i j| k l m n o p q r s t u v w x y z\n" +
+                "        ch = randomFile.readChar(); // a b c d e f g h i j k| l m n o p q r s t u v w x y z\n" +
+                "        System.out.println(ch);\n" +
+                "\n" +
+                "        // Move to character 3 (the 4th character), read the character, and display it. Should be the letter d.\n" +
+                "        byteNum = CHAR_SIZE * 3;\n" +
+                "        randomFile.seek(byteNum); // a b c| d e f g h i j k l m n o p q r s t u v w x y z\n" +
+                "        ch = randomFile.readChar(); // a b c d| e f g h i j k l m n o p q r s t u v w x y z\n" +
+                "        System.out.println(ch);\n" +
+                "\n" +
+                "        // Close the file.\n" +
+                "        randomFile.close();\n" +
+                "    }\n" +
+                "}");
+        System.out.println("----- CONSOLE: -----");
+        System.out.println("f\n" +
+                "k\n" +
+                "d");
+    }
+    private static void section7_8(){
+        System.out.println("Object File Writing (Serialization)(.dat)");
+        System.out.println("----------------------------------------");
+        System.out.println("----- CODE: -----");
+        System.out.println("public class SerializeObjects\n" +
+                "{\n" +
+                "    public static void main(String[] args) throws IOException\n" +
+                "    {\n" +
+                "        final int NUM_ITEMS = 3; // Number of Ninja's\n" +
+                "\n" +
+                "        // Create a Scanner object for keyboard input.\n" +
+                "        Scanner keyboard = new Scanner(System.in);\n" +
+                "\n" +
+                "        // Create a Ninja's array\n" +
+                "        Ninja[] ninjas = new Ninja[NUM_ITEMS];\n" +
+                "\n" +
+                "        // Populate the array.\n" +
+                "        for (int i = 0; i < ninjas.length; i++)\n" +
+                "        {\n" +
+                "            // Get an ninja name.\n" +
+                "            System.out.println(\"Enter the name for Ninja \" + (i + 1) + \": \");\n" +
+                "            String name = keyboard.nextLine();\n" +
+                "\n" +
+                "            // Create an object in the array.\n" +
+                "            ninjas[i] = new Ninja(name);\n" +
+                "        }\n" +
+                "\n" +
+                "        // Create the stream objects.\n" +
+                "        FileOutputStream outStream = new FileOutputStream(\"src/RandomAccessFilez/Data/NinjaObjects.dat\");\n" +
+                "        ObjectOutputStream objectOutputFile = new ObjectOutputStream(outStream);\n" +
+                "\n" +
+                "        // Write the serialized objects to the file.\n" +
+                "        for (int i = 0; i < ninjas.length; i++)\n" +
+                "        {\n" +
+                "            objectOutputFile.writeObject(ninjas[i]);\n" +
+                "        }\n" +
+                "\n" +
+                "        // Close the file.\n" +
+                "        objectOutputFile.close();\n" +
+                "\n" +
+                "        System.out.println(\"The serialized objects were written to the NinjaObjects.dat file.\");\n" +
+                "    }\n" +
+                "}");
+        System.out.println("----- CONSOLE: -----");
+        System.out.println("Enter the name for Ninja 1: Naruto\n" +
+                "Enter the name for Ninja 2: Sasuke\n" +
+                "Enter the name for Ninja 3: Sakura\n" +
+                "The serialized objects were written to the NinjaObjects.dat file.");
+    }
+    private static void section7_9(){
+        System.out.println("Object File Reading (Deserialization)(.dat)");
+        System.out.println("----------------------------------------");
+        System.out.println("----- CODE: -----");
+        System.out.println("public class DeserializeObjects\n" +
+                "{\n" +
+                "    public static void main(String[] args) throws Exception\n" +
+                "    {\n" +
+                "        final int NUM_ITEMS = 3; // Number of Ninja's\n" +
+                "\n" +
+                "        // Create the stream objects.\n" +
+                "        FileInputStream inStream = new FileInputStream(\"src/RandomAccessFilez/Data/NinjaObjects.dat\");\n" +
+                "        ObjectInputStream objectInputFile = new ObjectInputStream(inStream);\n" +
+                "\n" +
+                "        // Create a Ninja[] array\n" +
+                "        Ninja[] ninjas = new Ninja[NUM_ITEMS];\n" +
+                "\n" +
+                "        // Read the serialized objects from the file.\n" +
+                "        for (int i = 0; i < ninjas.length; i++)\n" +
+                "        {\n" +
+                "            ninjas[i] = (Ninja) objectInputFile.readObject();\n" +
+                "        }\n" +
+                "\n" +
+                "        // Close the file.\n" +
+                "        objectInputFile.close();\n" +
+                "\n" +
+                "        // Display the objects.\n" +
+                "        for (int i = 0; i < ninjas.length; i++)\n" +
+                "        {\n" +
+                "            System.out.print(\"Ninja \" + (i + 1) + \": \");\n" +
+                "            ninjas[i].greeting();\n" +
+                "        }\n" +
+                "    }\n" +
+                "}");
+        System.out.println("----- CONSOLE: ------");
+        System.out.println("Ninja 1: Hello, my name is Naruto\n" +
+                "Ninja 2: Hello, my name is Sasuke\n" +
+                "Ninja 3: Hello, my name is Sakura");
     }
 
-    //Sub Methods
+    //CHAPTER 8
+    private static void section8_1(){
+
+    }
+
+    //Example Methods
     private static int sumDigits (int number){
         //125 < 10 = false
         if (number < 10) {
