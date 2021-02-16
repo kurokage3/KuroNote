@@ -2610,6 +2610,9 @@ public class KuroNote {
     private static void section8_1(){
 
     }
+    private static void section8_2(){
+
+    }
 
     //Example Methods
     private static int sumDigits (int number){
