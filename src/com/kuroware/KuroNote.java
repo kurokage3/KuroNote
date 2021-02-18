@@ -45,10 +45,10 @@ public class KuroNote {
         System.out.println("    [1.6] Scanner : Console input                                ||    [7.7] Random Access File Reading (.dat)");
         System.out.println("    [1.7] Casting Types                                          ||    [7.8] Object File Writing (Serialization)(.dat)");
         System.out.println("    [1.8] Math.* : Random()                                      ||    [7.9] Object File Reading (Deserialization)(.dat)");
-        System.out.println("    [1.9] Math.* : Static Methods                                || Chapter 8: ");
-        System.out.println("Chapter 2: Expressions, Statements and Methods                   ||    [8.1] ");
-        System.out.println("    [2.1] Methods                                                ||");
-        System.out.println("    [2.2] While, For & Do                                        ||");
+        System.out.println("    [1.9] Math.* : Static Methods                                || Chapter 8: Exceptions");
+        System.out.println("Chapter 2: Expressions, Statements and Methods                   ||    [8.1] Try {} Catch {}");
+        System.out.println("    [2.1] Methods                                                ||    [8.2] Throwable Hierarchy");
+        System.out.println("    [2.2] While, For & Do                                        ||    [8.3] Crafting Exceptions");
         System.out.println("    [2.3] Switch Statement                                       ||");
         System.out.println("    [2.4] Method Overloading                                     ||");
         System.out.println("    [2.5] Method Example : sumDigits()                           ||");
@@ -56,7 +56,7 @@ public class KuroNote {
         System.out.println("    [3.1] JavaFX                                                 ||");
         System.out.println("    *[3.2] GUI                                                   ||");
         System.out.println("    *[3.3] SceneBuilder                                          ||");
-        System.out.println("    [3.4]                                                        ||");
+        System.out.println("    *[3.4]                                                       ||");
         System.out.println("Chapter 4: Object Oriented Programming                           ||");
         System.out.println("    [4.1] Classes                                                ||");
         System.out.println("    [4.2] Class Vs Instance Vs Object Vs Reference               ||");
@@ -65,7 +65,7 @@ public class KuroNote {
         System.out.println("    [4.5] This Vs Super                                          ||");
         System.out.println("    [4.6] Method Overriding                                      ||");
         System.out.println("    [4.7] Inheritance                                            ||");
-        System.out.println("    [4.8] Try {} Catch {}                                        ||");
+        System.out.println("    *[4.8]                                                       ||");
         System.out.println("    [4.9] Access Modifiers                                       ||");
         System.out.println("Chapter 5: Array, Java inbuilt Lists, Auto/Unboxing              ||");
         System.out.println("    [5.1] Array Information                                      ||");
@@ -298,6 +298,14 @@ public class KuroNote {
         else if(userNumber == 8.1){
             section8_1();
         }
+        else if(userNumber == 8.2){
+            section8_2();
+        }
+        else if(userNumber == 8.3){
+            section8_3();
+        }
+
+
 
 
         //NA
@@ -1502,8 +1510,6 @@ public class KuroNote {
 
     }
     private static void section4_8() {
-        System.out.println("Try & Catch Statements");
-        System.out.println("----------------------------------------");
 
     }
     private static void section4_9() {
@@ -2608,13 +2614,139 @@ public class KuroNote {
 
     //CHAPTER 8
     private static void section8_1(){
-
+        System.out.println("Try & Catch Statements");
+        System.out.println("----------------------------------------");
+        System.out.println("--- CODE: ---");
+        System.out.println("public class Testing {\n" +
+                "    public static void main(String[] args)\n" +
+                "    {\n" +
+                "        //Variables\n" +
+                "        int num;\n" +
+                "        String str;\n" +
+                "\n" +
+                "        //Try, Catch then Finally\n" +
+                "        try {\n" +
+                "            str = \"xyz\";\n" +
+                "            num = Integer.parseInt(str);\n" +
+                "            System.out.println(\"A\");\n" +
+                "        }\n" +
+                "        catch(NumberFormatException e) {\n" +
+                "            System.out.println(\"B\");\n" +
+                "        }\n" +
+                "        catch(IllegalArgumentException e) {\n" +
+                "            System.out.println(\"C\");\n" +
+                "        }\n" +
+                "        finally {\n" +
+                "            System.out.println(\"D\");\n" +
+                "        }\n" +
+                "    }\n" +
+                "}");
+        System.out.println("--- CONSOLE: ---");
+        System.out.println("B\n" +
+                "D");
     }
     private static void section8_2(){
+        System.out.println("Exception Hierarchy");
+        System.out.println("----------------------------------------");
+        System.out.println("Exception Types:");
+        System.out.println("Unchecked* = inherit from the \"Error\" || \"RuntimeException\" classes. (unchecked exceptions are also known as runtime exceptions.)");
+        System.out.println("Checked =  all remaining throwable objects. (checked exceptions are also known as compileTime exceptions.)");
+        System.out.println();
+        System.out.println("Goal:");
+        System.out.println("All checked exceptions should be handled by the developer within their program");
+        System.out.println();
+        System.out.println();
+        System.out.println();
+        System.out.println("Hierarchy:");
+        System.out.println();
+        System.out.println("Object");
+        System.out.println("│  ");
+        System.out.println("Throwable");
+        System.out.println("├── Error*");
+        System.out.println("│     ├── VirtualMachineError*");
+        System.out.println("│     │     ├── StackOverflowError");
+        System.out.println("│     │     ├── OutOfMemory");
+        System.out.println("│     │     └── . . .");
+        System.out.println("│     │   ");
+        System.out.println("│     ├── AssertionError");
+        System.out.println("│     ├── IOError");
+        System.out.println("│     └── . . .");
+        System.out.println("│  ");
+        System.out.println("└── Exception");
+        System.out.println("      ├── RuntimeException*");
+        System.out.println("      │     ├── IndexOutOfBoundsException");
+        System.out.println("      │     │     └── ArrayIndexOutOfBoundsException");
+        System.out.println("      │     ├── IllegalArgumentException");
+        System.out.println("      │     │     └── NumberFormatException");
+        System.out.println("      │     ├── NullPointerException");
+        System.out.println("      │     ├── IllegalStateException");
+        System.out.println("      │     ├── ClassCastException");
+        System.out.println("      │     ├── ArithmeticException");
+        System.out.println("      │     └── . . .");
+        System.out.println("      │   ");
+        System.out.println("      ├── IOException");
+        System.out.println("      │     ├── EOFException");
+        System.out.println("      │     ├── FileNotFoundException");
+        System.out.println("      │     ├── MalformedURLException");
+        System.out.println("      │     ├── UnknownHostException");
+        System.out.println("      │     └── . . .");
+        System.out.println("      │   ");
+        System.out.println("      ├── SQLException");
+        System.out.println("      ├── ClassNotFoundException");
+        System.out.println("      ├── InterruptedException");
+        System.out.println("      └── . . .");
 
+                //Tree Building
+        //        System.out.println("└──");
+        //        System.out.println("├──");
+        //        System.out.println("│  ");
+        //        System.out.println("   ");
     }
     private static void section8_3(){
-
+        System.out.println("Crafting Exceptions");
+        System.out.println("----------------------------------------");
+        System.out.println("--- CODE: ---");
+        //Custom Exception
+        System.out.println("public class DieException extends IllegalArgumentException {\n" +
+                "    public DieException() { //Default Constructor\n" +
+                "        super(\"The die must have at least 4 sides.\");\n" +
+                "    }\n" +
+                "    \n" +
+                "    public DieException(int sides) { //x1 int Parameter Constructor\n" +
+                "        super(\"The die must have at least 4 sides. This die has \"+sides+\".\");\n" +
+                "    }\n" +
+                "}\n");
+        //Die Class
+        System.out.println("public class Die {\n" +
+                "    private int sides;\n" +
+                "    private Random rand = new Random();\n" +
+                "\n" +
+                "    public Die(int numSides) {\n" +
+                "        // Validate the number of sides.\n" +
+                "        if (numSides < 4) {\n" +
+                "            throw new DieException(numSides);\n" +
+                "        }\n" +
+                "\n" +
+                "        this.sides = numSides;\n" +
+                "        roll();\n" +
+                "    }\n" +
+                "    public int roll() {\n" +
+                "        int value = rand.nextInt(sides) + 1;\n" +
+                "        return value;\n" +
+                "    }\n" +
+                "}");
+        //Main Class
+        System.out.println("public class DiceExceptionExample {\n" +
+                "    public static void main(String[] args) {\n" +
+                "        Die die = new Die(2); //Create new Die Object && *Trigger Exception*\n" +
+                "\n" +
+                "        System.out.println(\"First Roll = \"+die.roll()); //Print to console if valid\n" +
+                "    }\n" +
+                "}");
+        System.out.println("--- CONSOLE: ---");
+        System.out.println("Exception in thread \"main\" HandlingExceptions.Manual.DieException: The die must have at least 4 sides. This die has 2.\n" +
+                "\tat HandlingExceptions.Manual.Die.<init>(Die.java:13)\n" +
+                "\tat HandlingExceptions.Manual.DiceExceptionExample.main(DiceExceptionExample.java:7)");
     }
 
     //Example Methods
