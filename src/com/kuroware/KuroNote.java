@@ -75,7 +75,7 @@ public class KuroNote {
         System.out.println("    [5.5] Value Vs Reference Semantics                           ||");
         System.out.println("    [5.6] Assigning Objects to Arrays                            ||");
         System.out.println("    [5.7] AutoBoxing                                             ||");
-        System.out.println("    *[5.8] LinkedList                                            ||");
+        System.out.println("    [5.8] LinkedList                                             ||");
 
         //Prompt User Input
         System.out.println("------------------------------------------------------------------------------------------------------------------------------");
@@ -1560,11 +1560,11 @@ public class KuroNote {
     private static void section5_1() {
         System.out.println("Arrays Information");
         System.out.println("----------------------------------------");
-        System.out.println("    --- Vocabulary ---");
+        System.out.println("--- Vocabulary ---");
         System.out.println("Array: object that stores many values of the same type.");
         System.out.println("    element: One value in an array.");
         System.out.println("    index: A 0-based integer to access an element from an array.");
-        System.out.println("    --- Format ---");
+        System.out.println("--- Format ---");
         System.out.println("arrayType[] arrayName = new arrayType[length];");
         System.out.println("arrayType[] arrayName = {value, value, … value};");
         System.out.println("Ex. int[] numbers = new int[6]");
@@ -1573,22 +1573,22 @@ public class KuroNote {
         System.out.println("Ex. int[] numbers = {12, 49, -2, 26, 17, -6};");
         System.out.println("    index's:   0,  1,  2,  3,  4,  5");
         System.out.println("    values's: 12, 49, -2, 26,  5, -6");
-        System.out.println("    --- Methods ---");
-        System.out.println("MethodName");
+        System.out.println("--- Methods ---");
+        System.out.println(" > MethodName");
         System.out.println("    Description, Syntax: [ Arrays.MethodName(parameters) ]");
-        System.out.println("binarySearch(arrayName, value)");
+        System.out.println(" > binarySearch(arrayName, value)");
         System.out.println("    returns the index of the given value in a sorted array (or < 0 if not found)");
-        System.out.println("copyOf(arrayName, length)");
+        System.out.println(" > copyOf(arrayName, length)");
         System.out.println("    returns a new copy of an array");
-        System.out.println("equals(arrayName1, arrayName2)");
+        System.out.println(" > equals(arrayName1, arrayName2)");
         System.out.println("    returns true if the two arrays contain same elements in the same order");
-        System.out.println("fill(arrayName, value)");
+        System.out.println(" > fill(arrayName, value)");
         System.out.println("    sets every element to the given value");
-        System.out.println("sort(arrayName)");
+        System.out.println(" > sort(arrayName)");
         System.out.println("    arranges the elements into sorted order");
-        System.out.println("toString(arrayName)");
+        System.out.println(" > toString(arrayName)");
         System.out.println("    returns a string representing the array, such as \"[10, 30, -25, 17]\"");
-        System.out.println("    --- Tips ---");
+        System.out.println("--- Tips ---");
         System.out.println(" > The length can be any integer expression.");
         System.out.println("    int x = 2 * 3 + 1;");
         System.out.println("    int[] data = new int[x % 5 + 2];");
@@ -1852,12 +1852,12 @@ public class KuroNote {
                 "\t    for (int i = 0; i < a.length; i++) {\n" +
                 "\t        a[i] = a[i] * 2;\n" +
                 "\t    }\n" +
-                "\t}\n");
+                "\t} \n//CONSOLE:[252, 334, 190]");
     }
     private static void section5_6() {
         System.out.println("Assigning Objects to Arrays");
         System.out.println("----------------------------------------");
-        System.out.println("\tCODE:");
+        System.out.println("--- CODE: ---");
         System.out.println("class unit {\n" +
                 "    String name;\n" +
                 "    public int atk;\n" +
@@ -1881,7 +1881,7 @@ public class KuroNote {
                 "        }\n" +
                 "    }\n" +
                 "}\n");
-        System.out.println("\tCONSOLE:");
+        System.out.println("--- CONSOLE: ---");
         System.out.println("Unit Name = Kuro#0\n" +
                 "Unit ATK = 0\n" +
                 "Unit DEF = 2\n" +
@@ -1945,6 +1945,49 @@ public class KuroNote {
     private static void section5_8(){
         System.out.println("Linked List");
         System.out.println("----------------------------------------");
+        System.out.println("--- WHEN TO USE: ---");
+        System.out.println("It is best to use an ArrayList when:");
+        System.out.println("    -You want to access random items frequently");
+        System.out.println("    -You only need to add or remove elements at the end of the list");
+        System.out.println("It is best to use a LinkedList when:");
+        System.out.println("    -You only use the list by looping through it instead of accessing random items");
+        System.out.println("    -You frequently need to add and remove items from the beginning, middle or end of the list");
+        System.out.println();
+        System.out.println("--- METHODS: ---");
+        System.out.println("addFirst()    = Adds an item to the beginning of the list");
+        System.out.println("addLast()     = Add an item to the end of the list");
+        System.out.println("removeFirst() = Remove an item from the beginning of the list");
+        System.out.println("removeLast()  = Remove an item from the end of the list");
+        System.out.println("getFirst()    = Get the item at the beginning of the list");
+        System.out.println("getLast()     = Get the item at the end of the list");
+        System.out.println("*Many ArrayList Methods are functional with a LinkedList");
+        System.out.println();
+        System.out.println("--- CODE: ---");
+        System.out.println("import java.util.LinkedList;\n" +
+                "\n" +
+                "public class spellManager {\n" +
+                "    public static void main(String[] args) {\n" +
+                "        LinkedList<String> MagicSpells = new LinkedList<>();\n" +
+                "\n" +
+                "        //Cast Spells On Stack\n" +
+                "        MagicSpells.addFirst(\"1. P1 Used \\\"Chain Lightning\\\" on P2 (Instant)\");\n" +
+                "        MagicSpells.addFirst(\"2. P2 Used \\\"Counter\\\" on \\\"Chain Lightning\\\" (Instant)\");\n" +
+                "        MagicSpells.addLast(\"3. P3 Used \\\"FireBall\\\" on P2 (Sorcery)\");\n" +
+                "        MagicSpells.addFirst(\"4. P2 Used \\\"Counter\\\" on \\\"Fireball\\\" (Instant)\");\n" +
+                "\n" +
+                "        //Trigger All Spells Off Stack\n" +
+                "        int originalLinkedListSize = MagicSpells.size();\n" +
+                "        for (int i = 0; i < originalLinkedListSize; i++) {\n" +
+                "            System.out.println(\"Spell #\"+(i+1)+\": \"+MagicSpells.getFirst());\n" +
+                "            MagicSpells.removeFirst();\n" +
+                "        }\n" +
+                "    }\n" +
+                "}");
+        System.out.println("--- CONSOLE: ---");
+        System.out.println("Spell #1: 4. P2 Used \"Counter\" on \"Fireball\" (Instant)\n" +
+                "Spell #2: 2. P2 Used \"Counter\" on \"Chain Lightning\" (Instant)\n" +
+                "Spell #3: 1. P1 Used \"Chain Lightning\" on P2 (Instant)\n" +
+                "Spell #4: 3. P3 Used \"FireBall\" on P2 (Sorcery)");
     }
 
     //CHAPTER 6
@@ -2748,6 +2791,7 @@ public class KuroNote {
                 "\tat HandlingExceptions.Manual.Die.<init>(Die.java:13)\n" +
                 "\tat HandlingExceptions.Manual.DiceExceptionExample.main(DiceExceptionExample.java:7)");
     }
+
 
     //Example Methods
     private static int sumDigits (int number){
