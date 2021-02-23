@@ -54,9 +54,9 @@ public class KuroNote {
         System.out.println("    [2.5] Method Example : sumDigits()                           ||");
         System.out.println("Chapter 3: GUI & JavaFX                                          ||");
         System.out.println("    [3.1] JavaFX                                                 ||");
-        System.out.println("    *[3.2] GUI                                                   ||");
-        System.out.println("    *[3.3] SceneBuilder                                          ||");
-        System.out.println("    *[3.4]                                                       ||");
+        System.out.println("    [3.2] GUI & Basic Controls                                   ||");
+        System.out.println("    *[3.3]                                                       ||");
+        System.out.println("    *[3.4] SceneBuilder                                          ||");
         System.out.println("Chapter 4: Object Oriented Programming                           ||");
         System.out.println("    [4.1] Classes                                                ||");
         System.out.println("    [4.2] Class Vs Instance Vs Object Vs Reference               ||");
@@ -1131,8 +1131,47 @@ public class KuroNote {
         System.out.println("---------------------------------------------------------------");
     }
     private static void section3_2() {
-        System.out.println("Drawing with a GUI");
+        System.out.println("GUI & Basic Controls");
         System.out.println("---------------------------------------------------------------");
+        System.out.println("--- EXAMPLE CODE: ---");
+        System.out.println("public class EventDemo extends Application\n" +
+                "{\n" +
+                "    // Field for the Label control\n" +
+                "    private Label myLabel;\n" +
+                "\n" +
+                "    public static void main(String[] args)\n" +
+                "    {\n" +
+                "        // Launch the application.\n" +
+                "        launch(args);\n" +
+                "    }\n" +
+                "\n" +
+                "    @Override\n" +
+                "    public void start(Stage primaryStage) {\n" +
+                "        // Create a Label control.\n" +
+                "        myLabel = new Label(\"Click the button to see a message.\");\n" +
+                "\n" +
+                "        // Create a Button control && Register the event handler.\n" +
+                "        Button myButton = new Button(\"Click Me\");\n" +
+                "\n" +
+                "        //Lambda Function to change text\n" +
+                "        myButton.setOnAction(event -> {\n" +
+                "            myLabel.setText(\"Thanks for clicking the button!\");\n" +
+                "        });\n" +
+                "\n" +
+                "        // Put the Label and Button in a VBox with 10 pixels of spacing && Set the scene's alignment to center.\n" +
+                "        VBox vbox = new VBox(10, myLabel, myButton);\n" +
+                "        vbox.setAlignment(Pos.CENTER);\n" +
+                "\n" +
+                "        // Create a Scene with the VBox as its root node.\n" +
+                "        Scene scene = new Scene(vbox, 300, 100);\n" +
+                "\n" +
+                "        // Add the Scene to the Stage.\n" +
+                "        primaryStage.setScene(scene);\n" +
+                "        primaryStage.setTitle(\"Button Demo\");\n" +
+                "        primaryStage.show();\n" +
+                "    }\n" +
+                "}\n");
+        System.out.println("--- JavaFX Window will display the label && intractable button ---");
 
     }
     private static void section3_3() {
@@ -2791,7 +2830,6 @@ public class KuroNote {
                 "\tat HandlingExceptions.Manual.Die.<init>(Die.java:13)\n" +
                 "\tat HandlingExceptions.Manual.DiceExceptionExample.main(DiceExceptionExample.java:7)");
     }
-
 
     //Example Methods
     private static int sumDigits (int number){
