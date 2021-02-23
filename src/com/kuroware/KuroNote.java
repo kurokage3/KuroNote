@@ -1133,7 +1133,16 @@ public class KuroNote {
     private static void section3_2() {
         System.out.println("GUI & Basic Controls");
         System.out.println("---------------------------------------------------------------");
-        System.out.println("--- EXAMPLE CODE: ---");
+        System.out.println("    Techniques Creating Handlers for Controls");
+        System.out.println("#1. Writing the definition of an inner class that implements the EventHandler interface. Then, instantiating that class, and registering it with a control.");
+        System.out.println("#2. Instantiating an anonymous inner class that implements the EventHandler interface, and registering the object with a control.");
+        System.out.println("#3. Using a lambda expression to instantiate an anonymous inner class that implements the EventHandler interface, and registering the object with a control.");
+        System.out.println("    Advantages of each:");
+        System.out.println("#1. Defining an inner class, is advantageous for writing event handlers with a lot of code.");
+        System.out.println("#2. Instantiating an anonymous inner class, is advantageous for writing event handlers that have only a small amount of code.");
+        System.out.println("#3. Using a lambda expression, is the best approach for writing event handlers that have a small amount of code, as long as the code accesses variables that are effectively final.");
+        System.out.println();
+        System.out.println("--- EXAMPLE CODE: (Lambda Function Handles the Button Control) ---");
         System.out.println("public class EventDemo extends Application\n" +
                 "{\n" +
                 "    // Field for the Label control\n" +
@@ -1175,10 +1184,12 @@ public class KuroNote {
 
     }
     private static void section3_3() {
-
+        System.out.println("Blank");
+        System.out.println("---------------------------------------------------------------");
     }
     private static void section3_4() {
-
+        System.out.println("Blank");
+        System.out.println("---------------------------------------------------------------");
     }
 
     //CHAPTER 4
