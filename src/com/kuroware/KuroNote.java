@@ -44,7 +44,7 @@ public class KuroNote {
         System.out.println("    [1.5] String : Parse && Formatting                           ||    [7.6] Random Access File Writing (.dat)");
         System.out.println("    [1.6] Scanner : Console input                                ||    [7.7] Random Access File Reading (.dat)");
         System.out.println("    [1.7] Casting Types                                          ||    [7.8] Object File Writing (Serialization)(.dat)");
-        System.out.println("    [1.8] Math.* : Random()                                      ||    [7.9] Object File Reading (Deserialization)(.dat)");
+        System.out.println("    [1.8] Random()                                               ||    [7.9] Object File Reading (Deserialization)(.dat)");
         System.out.println("    [1.9] Math.* : Static Methods                                || Chapter 8: Exceptions");
         System.out.println("Chapter 2: Expressions, Statements and Methods                   ||    [8.1] Try {} Catch {}");
         System.out.println("    [2.1] Methods                                                ||    [8.2] Throwable Hierarchy");
