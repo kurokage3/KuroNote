@@ -1,5 +1,7 @@
 package com.kuroware;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -49,8 +51,8 @@ public class KuroNote {
         System.out.println("Chapter 2: Expressions, Statements and Methods                   ||    [8.1] Try {} Catch {}");
         System.out.println("    [2.1] Methods                                                ||    [8.2] Throwable Hierarchy");
         System.out.println("    [2.2] While, For & Do                                        ||    [8.3] Crafting Exceptions");
-        System.out.println("    [2.3] Switch Statement                                       ||");
-        System.out.println("    [2.4] Method Overloading                                     ||");
+        System.out.println("    [2.3] Switch Statement                                       || Chapter 9: Databases");
+        System.out.println("    [2.4] Method Overloading                                     ||    [9.1] Setup Apache Derby");
         System.out.println("    [2.5] Method Example : sumDigits()                           ||");
         System.out.println("Chapter 3: GUI & JavaFX                                          ||");
         System.out.println("    [3.1] JavaFX                                                 ||");
@@ -107,209 +109,28 @@ public class KuroNote {
         //Load the Title
         loadTitle(userNumber);
 
-        // 0.X
-        if(userNumber == 0.0){
-            section0_0();
+        int chapterNumber = (int) userNumber;
+        int sectionNumber = (int) ((userNumber * 10) % 10);
+
+        //Try to call method name
+        String methodName = "section"+chapterNumber+"_"+sectionNumber;
+        boolean success = false;
+        try {
+            Method m = KuroNote.class.getDeclaredMethod(methodName);
+            m.setAccessible(true);
+            m.invoke(null);
+
+            success = true;
         }
-        else if (userNumber == 0.1) {
-            section0_1();
+        catch (NoSuchMethodException e){
+            System.out.println(e.getMessage());
         }
-        else if (userNumber == 0.2) {
-            section0_2();
-        }
-        else if (userNumber == 0.3) {
-            section0_3();
-        }
-        else if (userNumber == 0.4) {
-            section0_4();
-        }
-        else if (userNumber == 0.5) {
-            section0_5();
-        }
-        else if (userNumber == 0.6) {
-            section0_6();
+        catch (IllegalAccessException | InvocationTargetException e) {
+            e.printStackTrace();
         }
 
-        // 1.X
-        else if (userNumber == 1.1) {
-            section1_1();
-        }
-        else if (userNumber == 1.2) {
-            section1_2();
-        }
-        else if (userNumber == 1.3) {
-            section1_3();
-        }
-        else if (userNumber == 1.4) {
-            section1_4();
-        }
-        else if (userNumber == 1.5) {
-            section1_5();
-        }
-        else if (userNumber == 1.6) {
-            section1_6();
-        }
-        else if (userNumber == 1.7) {
-            section1_7();
-        }
-        else if (userNumber == 1.8) {
-            section1_8();
-        }
-        else if (userNumber == 1.9) {
-            section1_9();
-        }
-
-        // 2.X
-        else if (userNumber == 2.1) {
-            section2_1();
-        }
-        else if (userNumber == 2.2) {
-            section2_2();
-        }
-        else if (userNumber == 2.3) {
-            section2_3();
-        }
-        else if (userNumber == 2.4) {
-            section2_4();
-        }
-        else if (userNumber == 2.5) {
-            section2_5();
-        }
-
-        // 3.X
-        else if (userNumber == 3.1) {
-            section3_1();
-        }
-        else if (userNumber == 3.2) {
-            section3_2();
-        }
-        else if (userNumber == 3.3) {
-            section3_3();
-        }
-        else if (userNumber == 3.4) {
-            section3_4();
-        }
-
-        // 4.X
-        else if (userNumber == 4.1) {
-            section4_1();
-        }
-        else if (userNumber == 4.2) {
-            section4_2();
-        }
-        else if (userNumber == 4.3) {
-            section4_3();
-        }
-        else if (userNumber == 4.4) {
-            section4_4();
-        }
-        else if (userNumber == 4.5) {
-            section4_5();
-        }
-        else if (userNumber == 4.6) {
-            section4_6();
-        }
-        else if (userNumber == 4.7) {
-            section4_7();
-        }
-        else if (userNumber == 4.8) {
-            section4_8();
-        }
-        else if (userNumber == 4.9) {
-            section4_9();
-        }
-
-        // 5.X
-        else if (userNumber == 5.1) {
-            section5_1();
-        }
-        else if (userNumber == 5.2) {
-            section5_2();
-        }
-        else if (userNumber == 5.3) {
-            section5_3();
-        }
-        else if (userNumber == 5.4) {
-            section5_4();
-        }
-        else if (userNumber == 5.5) {
-            section5_5();
-        }
-        else if (userNumber == 5.6) {
-            section5_6();
-        }
-        else if (userNumber == 5.7) {
-            section5_7();
-        }
-        else if (userNumber == 5.8) {
-            section5_8();
-        }
-
-        // 6.X
-        else if (userNumber == 6.1) {
-            section6_1();
-        }
-        else if (userNumber == 6.2) {
-            section6_2();
-        }
-        else if (userNumber == 6.3) {
-            section6_3();
-        }
-        else if (userNumber == 6.4) {
-            section6_4();
-        }
-        else if (userNumber == 6.5) {
-            section6_5();
-        }
-        else if (userNumber == 6.6) {
-            section6_6();
-        }
-
-        // 7.X
-        else if (userNumber == 7.1) {
-            section7_1();
-        }
-        else if (userNumber == 7.2) {
-            section7_2();
-        }
-        else if (userNumber == 7.3) {
-            section7_3();
-        }
-        else if (userNumber == 7.4) {
-            section7_4();
-        }
-        else if (userNumber == 7.5) {
-            section7_5();
-        }
-        else if (userNumber == 7.6) {
-            section7_6();
-        }
-        else if (userNumber == 7.7) {
-            section7_7();
-        }
-        else if (userNumber == 7.8) {
-            section7_8();
-        }
-        else if (userNumber == 7.9) {
-            section7_9();
-        }
-
-        // 8.X
-        else if(userNumber == 8.1){
-            section8_1();
-        }
-        else if(userNumber == 8.2){
-            section8_2();
-        }
-        else if(userNumber == 8.3){
-            section8_3();
-        }
-
-
-
-
-        //NA
-        else {
+        //Otherwise prompt new entry
+        if(!success){
             System.out.println("Try choosing a listed number next time...");
         }
 
@@ -2840,6 +2661,46 @@ public class KuroNote {
         System.out.println("Exception in thread \"main\" HandlingExceptions.Manual.DieException: The die must have at least 4 sides. This die has 2.\n" +
                 "\tat HandlingExceptions.Manual.Die.<init>(Die.java:13)\n" +
                 "\tat HandlingExceptions.Manual.DiceExceptionExample.main(DiceExceptionExample.java:7)");
+    }
+
+    //CHAPTER 9
+    private static void section9_1(){
+        System.out.println("Setup Apache Derby");
+        System.out.println("----------------------------------------");
+        System.out.println("1. Download & Install Apache Derby (bin.zip) @link: https://db.apache.org/derby/derby_downloads.html");
+        System.out.println("2. Windows Key -> Edit the system environment variables -> Add to Path -> C:\\Apache\\db-derby-10.15.2.0-bin\\bin");
+        System.out.println("3. CMD -> cd C:\\Apache\\DerbyData -> ij -> connect 'jdbc:derby:CoffeeDB; create=true';");
+        System.out.println("        This should have created a database at the location C:\\Apache\\DerbyData");
+        System.out.println("4. Program Structure -> Modules -> On the far right, click on the \"+\" sign and then select \"Jars or Directories\"");
+        System.out.println("        Add: C:\\Apache\\db-derby-10.15.2.0-bin\\lib\\derby.jar");
+        System.out.println("        Add: C:\\Apache\\db-derby-10.15.2.0-bin\\lib\\derbynet.jar");
+        System.out.println("        Add: C:\\Apache\\db-derby-10.15.2.0-bin\\lib\\derbyclient.jar");
+        System.out.println("        Add: C:\\Apache\\db-derby-10.15.2.0-bin\\lib\\derbytools.jar");
+        System.out.println("5. Test & Enjoy DataBase");
+        System.out.println();
+        System.out.println("--- CODE: ---");
+        System.out.println("public class TestConnection {\n" +
+                "    public static void main(String[] args) {\n" +
+                "        // Create a named constant for the URL (NOTE: This value is specific for either Java DB or Apache Derby)\n" +
+                "        final String DB_URL = \"jdbc:derby:C:\\\\Apache\\\\DerbyData\\\\CoffeeDB\";\n" +
+                "\n" +
+                "        try {\n" +
+                "            // Create a connection to the database.\n" +
+                "            Connection conn = DriverManager.getConnection(DB_URL);\n" +
+                "            System.out.println(\"Connection created to CoffeeDB.\");\n" +
+                "\n" +
+                "            // Close the connection.\n" +
+                "            conn.close();\n" +
+                "            System.out.println(\"Connection closed.\");\n" +
+                "        }\n" +
+                "        catch (Exception ex) {\n" +
+                "            System.out.println(\"ERROR: \" + ex.getMessage());\n" +
+                "        }\n" +
+                "    }\n" +
+                "}");
+        System.out.println("--- CONSOLE: ---");
+        System.out.println("Connection created to CoffeeDB.\n" +
+                "Connection closed.");
     }
 
     //Example Methods
