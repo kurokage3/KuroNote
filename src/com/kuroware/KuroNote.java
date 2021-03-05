@@ -2708,6 +2708,9 @@ public class KuroNote {
         System.out.println("--- CONSOLE: ---");
         System.out.println("Connection created to CoffeeDB.\n" +
                 "Connection closed.");
+        //https://www.youtube.com/watch?v=UuXkwgPkVPg //Part 1 Install
+        //https://www.youtube.com/watch?v=psCbBkD1d9g //Part 2 Work with in CMD
+        //https://www.youtube.com/watch?v=M-BbeTigZAU //Part 3 Intellij
     }
 
     //Example Methods
