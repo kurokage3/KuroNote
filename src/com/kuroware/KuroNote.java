@@ -2708,6 +2708,15 @@ public class KuroNote {
         System.out.println("--- CONSOLE: ---");
         System.out.println("Connection created to CoffeeDB.\n" +
                 "Connection closed.");
+        System.out.println("--- Using \"ij\" in CMD ---");
+        System.out.println("1. Windows Key -> Type \"Edit the System Environment Variables\" -> Environment Variables -> Path -> Edit");
+        System.out.println("2. Add Derby bin directory, Ex: \"C:\\Apache\\db-derby-10.15.2.0-bin\\bin\"");
+        System.out.println("3. Okay -> Okay -> Okay");
+        System.out.println("4. CMD -> ij -> ij Commands");
+        System.out.println("--- CMD ---");
+        System.out.println("ij");
+        System.out.println("connect 'jdbc:derby:C:\\Apache\\DerbyData\\CoffeeDB';");
+        System.out.println();
         //https://www.youtube.com/watch?v=UuXkwgPkVPg //Part 1 Install
         //https://www.youtube.com/watch?v=psCbBkD1d9g //Part 2 Work with in CMD
         //https://www.youtube.com/watch?v=M-BbeTigZAU //Part 3 Intellij
