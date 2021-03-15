@@ -55,10 +55,10 @@ public class KuroNote {
         System.out.println("    [2.4] Method Overloading                                     ||    [9.1] Setup Apache Derby");
         System.out.println("    [2.5] Method Example : sumDigits()                           ||");
         System.out.println("Chapter 3: GUI & JavaFX                                          ||");
-        System.out.println("    [3.1] JavaFX                                                 ||");
-        System.out.println("    [3.2] GUI & Basic Controls                                   ||");
-        System.out.println("    *[3.3]                                                       ||");
-        System.out.println("    *[3.4] SceneBuilder                                          ||");
+        System.out.println("    [3.1] Swing Basic Controls                                   ||");
+        System.out.println("    [3.2] JavaFX Setup                                           ||");
+        System.out.println("    [3.3] JavaFX Basic Controls                                  ||");
+        System.out.println("    [3.4] JavaFX SceneBuilder                                    ||");
         System.out.println("Chapter 4: Object Oriented Programming                           ||");
         System.out.println("    [4.1] Classes                                                ||");
         System.out.println("    [4.2] Class Vs Instance Vs Object Vs Reference               ||");
@@ -933,7 +933,55 @@ public class KuroNote {
 
     //CHAPTER 3
     private static void section3_1() {
-        System.out.println("JavaFX");
+        System.out.println("Swing Basic Controls");
+        System.out.println("---------------------------------------------------------------");
+        System.out.println("import javax.swing.*;\n" +
+                "import java.awt.event.*;\n" +
+                "\n" +
+                "public class KiloConverter extends JFrame {\n" +
+                "    private JPanel panel;\n" +
+                "    private JTextField kiloTextField;\n" +
+                "    private JLabel messageLabel;\n" +
+                "    private JButton calcButton;\n" +
+                "\n" +
+                "    public static void main(String[] args) {\n" +
+                "        new KiloConverter();\n" +
+                "    }\n" +
+                "    private KiloConverter() {\n" +
+                "        setTitle(\"Kilometer Converter\"); // Set the window title.\n" +
+                "        setSize(310, 100); // Size of the window.\n" +
+                "        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // Specify what happens when the close button is clicked.\n" +
+                "\n" +
+                "        buildPanel(); // Build the panel\n" +
+                "\n" +
+                "        add(panel); // Add the panel to the frame's content pane.\n" +
+                "        setVisible(true); // Display the window.\n" +
+                "    }\n" +
+                "    private void buildPanel() {\n" +
+                "        messageLabel = new JLabel(\"Enter a distance in kilometers\"); // Create a label to display instructions.\n" +
+                "        kiloTextField = new JTextField(10); // Create a text field 10 characters wide.\n" +
+                "        calcButton = new JButton(\"Calculate\"); // Create a button with the caption \"Calculate\".\n" +
+                "\n" +
+                "        calcButton.addActionListener(new CalcButtonListener()); // Add an action listener to the button.\n" +
+                "\n" +
+                "        panel = new JPanel(); // Create a JPanel object and let the panel field reference it && Add components to the panel.\n" +
+                "        panel.add(messageLabel);\n" +
+                "        panel.add(kiloTextField);\n" +
+                "        panel.add(calcButton);\n" +
+                "    }\n" +
+                "    private class CalcButtonListener implements ActionListener {\n" +
+                "        public void actionPerformed(ActionEvent e) {\n" +
+                "            String input = kiloTextField.getText();\n" +
+                "\n" +
+                "            double miles = Double.parseDouble(input) * 0.6214;\n" +
+                "\n" +
+                "            JOptionPane.showMessageDialog(null, input + \" kilometers is \" + miles + \" miles.\");\n" +
+                "        }\n" +
+                "    }\n" +
+                "}");
+    }
+    private static void section3_2() {
+        System.out.println("JavaFX Setup");
         System.out.println("---------------------------------------------------------------");
         System.out.println("Installation:");
         System.out.println("-Download Intellij");
@@ -951,13 +999,14 @@ public class KuroNote {
         System.out.println("Enjoy!");
         System.out.println("---------------------------------------------------------------");
     }
-    private static void section3_2() {
-        System.out.println("GUI & Basic Controls");
+    private static void section3_3() {
+        System.out.println("JavaFX Basic Controls");
         System.out.println("---------------------------------------------------------------");
         System.out.println("    Techniques Creating Handlers for Controls");
         System.out.println("#1. Writing the definition of an inner class that implements the EventHandler interface. Then, instantiating that class, and registering it with a control.");
         System.out.println("#2. Instantiating an anonymous inner class that implements the EventHandler interface, and registering the object with a control.");
         System.out.println("#3. Using a lambda expression to instantiate an anonymous inner class that implements the EventHandler interface, and registering the object with a control.");
+        System.out.println();
         System.out.println("    Advantages of each:");
         System.out.println("#1. Defining an inner class, is advantageous for writing event handlers with a lot of code.");
         System.out.println("#2. Instantiating an anonymous inner class, is advantageous for writing event handlers that have only a small amount of code.");
@@ -1000,16 +1049,12 @@ public class KuroNote {
                 "        primaryStage.setTitle(\"Button Demo\");\n" +
                 "        primaryStage.show();\n" +
                 "    }\n" +
-                "}\n");
+                "}");
         System.out.println("--- JavaFX Window will display the label && intractable button ---");
 
     }
-    private static void section3_3() {
-        System.out.println("Blank");
-        System.out.println("---------------------------------------------------------------");
-    }
     private static void section3_4() {
-        System.out.println("Blank");
+        System.out.println("JavaFX SceneBuilder");
         System.out.println("---------------------------------------------------------------");
     }
 
