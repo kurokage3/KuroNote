@@ -54,7 +54,7 @@ public class KuroNote {
         System.out.println("    [2.3] Switch Statement                                       || Chapter 9: Databases");
         System.out.println("    [2.4] Method Overloading                                     ||    [9.1] Setup Apache Derby");
         System.out.println("    [2.5] Method Example : sumDigits()                           ||");
-        System.out.println("Chapter 3: GUI & JavaFX                                          ||");
+        System.out.println("Chapter 3: GUI                                                   ||");
         System.out.println("    [3.1] Swing Basic Controls                                   ||");
         System.out.println("    [3.2] JavaFX Setup                                           ||");
         System.out.println("    [3.3] JavaFX Basic Controls                                  ||");
