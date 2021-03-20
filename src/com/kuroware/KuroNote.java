@@ -55,10 +55,11 @@ public class KuroNote {
         System.out.println("    [2.4] Method Overloading                                     ||    [9.1] Setup Apache Derby");
         System.out.println("    [2.5] Method Example : sumDigits()                           ||");
         System.out.println("Chapter 3: GUI                                                   ||");
-        System.out.println("    [3.1] Swing Basic Controls                                   ||");
-        System.out.println("    [3.2] JavaFX Setup                                           ||");
-        System.out.println("    [3.3] JavaFX Basic Controls                                  ||");
-        System.out.println("    [3.4] JavaFX SceneBuilder                                    ||");
+        System.out.println("    [3.1] Swing Setup                                            ||");
+        System.out.println("    [3.2] Swing & AWT Basic Program                              ||");
+        System.out.println("    [3.3] JavaFX Setup                                           ||");
+        System.out.println("    [3.4] JavaFX Basic Program                                   ||");
+        System.out.println("    [3.5] JavaFX SceneBuilder                                    ||");
         System.out.println("Chapter 4: Object Oriented Programming                           ||");
         System.out.println("    [4.1] Classes                                                ||");
         System.out.println("    [4.2] Class Vs Instance Vs Object Vs Reference               ||");
@@ -67,8 +68,7 @@ public class KuroNote {
         System.out.println("    [4.5] This Vs Super                                          ||");
         System.out.println("    [4.6] Method Overriding                                      ||");
         System.out.println("    [4.7] Inheritance                                            ||");
-        System.out.println("    *[4.8]                                                       ||");
-        System.out.println("    [4.9] Access Modifiers                                       ||");
+        System.out.println("    [4.8] Access Modifiers                                       ||");
         System.out.println("Chapter 5: Array, Java inbuilt Lists, Auto/Unboxing              ||");
         System.out.println("    [5.1] Array Information                                      ||");
         System.out.println("    [5.2] Array (1D)                                             ||");
@@ -933,7 +933,61 @@ public class KuroNote {
 
     //CHAPTER 3
     private static void section3_1() {
-        System.out.println("Swing Basic Controls");
+        System.out.println("Swing Setup");
+        System.out.println("---------------------------------------------------------------");
+        System.out.println("Abstract Window Toolkit (AWT) is a set of application program interfaces (API) used by Java programmers to create graphical user "
+                +"interface (GUI) objects, such as buttons, scroll bars, and windows. \nAWT is part of the Java Foundation Classes (JFC) from Sun Microsystems, the company that originated Java.");
+        System.out.println();
+        System.out.println("Swing is the latest GUI toolkit, and provides a richer set of interface components than the AWT. In addition, Swing components offer the following"
+                +"advantages over AWT components:");
+        System.out.println("The behavior and appearance of Swing components is consistent across platforms, whereas AWT components will differ from platform to platform\n" +
+                "Swing components can be given their own \"look and feel\"\n" +
+                "Swing uses a more efficient event model than AWT; therefore, Swing components can run more quickly than their AWT counterparts");
+        System.out.println();
+        System.out.println("AWT Component => import java.awt.*");
+        System.out.println("Swing Component => import javax.swing.*");
+        System.out.println();
+        System.out.println("Swing and AWT Class Hierarchy:     (* = AWT , Remainder = Swing)");
+        System.out.println();
+        System.out.println("Object");
+        System.out.println("│  ");
+        System.out.println("Component *");
+        System.out.println("├── Container *");
+        System.out.println("│     ├── Window *");
+        System.out.println("│     │     ├── Frame *");
+        System.out.println("│     │     │     └── JFrame");
+        System.out.println("│     │     ├── Dialog *");
+        System.out.println("│     │     │     └── JDialog");
+        System.out.println("│     │     └── . . .");
+        System.out.println("│     ├── JComponent");
+        System.out.println("│     │     ├── JPanel");
+        System.out.println("│     │     ├── JLabel");
+        System.out.println("│     │     ├── JList");
+        System.out.println("│     │     ├── JComboBox");
+        System.out.println("│     │     ├── JMenuBar");
+        System.out.println("│     │     ├── JPopupMenu");
+        System.out.println("│     │     ├── JTable");
+        System.out.println("│     │     ├── JTree");
+        System.out.println("│     │     ├── Abstract Button");
+        System.out.println("│     │     │     ├── JMenuItem");
+        System.out.println("│     │     │     │     ├── JMenu");
+        System.out.println("│     │     │     │     ├── JCheckBoxMenuItem");
+        System.out.println("│     │     │     │     └── JRadioButtonMenuItem");
+        System.out.println("│     │     │     ├── JToggleButton");
+        System.out.println("│     │     │     │     ├── JRadioButton");
+        System.out.println("│     │     │     │     └── JCheckBox");
+        System.out.println("│     │     │     └── JButton");
+        System.out.println("│     │     ├── JTextComponent");
+        System.out.println("│     │     │     ├── JTextField");
+        System.out.println("│     │     │     │     └── JPasswordField");
+        System.out.println("│     │     │     ├── JTextArea");
+        System.out.println("│     │     │     └── . . .");
+        System.out.println("│     │     └── . . .");
+        System.out.println("│     └── . . .");
+        System.out.println("└── . . .");
+    }
+    private static void section3_2() {
+        System.out.println("Swing Basic Program");
         System.out.println("---------------------------------------------------------------");
         System.out.println("import javax.swing.*;\n" +
                 "import java.awt.event.*;\n" +
@@ -980,7 +1034,7 @@ public class KuroNote {
                 "    }\n" +
                 "}");
     }
-    private static void section3_2() {
+    private static void section3_3() {
         System.out.println("JavaFX Setup");
         System.out.println("---------------------------------------------------------------");
         System.out.println("Installation:");
@@ -999,8 +1053,8 @@ public class KuroNote {
         System.out.println("Enjoy!");
         System.out.println("---------------------------------------------------------------");
     }
-    private static void section3_3() {
-        System.out.println("JavaFX Basic Controls");
+    private static void section3_4() {
+        System.out.println("JavaFX Basic Program");
         System.out.println("---------------------------------------------------------------");
         System.out.println("    Techniques Creating Handlers for Controls");
         System.out.println("#1. Writing the definition of an inner class that implements the EventHandler interface. Then, instantiating that class, and registering it with a control.");
@@ -1053,7 +1107,7 @@ public class KuroNote {
         System.out.println("--- JavaFX Window will display the label && intractable button ---");
 
     }
-    private static void section3_4() {
+    private static void section3_5() {
         System.out.println("JavaFX SceneBuilder");
         System.out.println("---------------------------------------------------------------");
     }
@@ -1426,9 +1480,6 @@ public class KuroNote {
 
     }
     private static void section4_8() {
-
-    }
-    private static void section4_9() {
         System.out.println("Access Modifiers");
         System.out.println("---------------");
         System.out.println();
@@ -2607,22 +2658,22 @@ public class KuroNote {
     private static void section8_2(){
         System.out.println("Exception Hierarchy");
         System.out.println("----------------------------------------");
-        System.out.println("Exception Types:");
-        System.out.println("Unchecked* = inherit from the \"Error\" || \"RuntimeException\" classes. (unchecked exceptions are also known as runtime exceptions.)");
-        System.out.println("Checked =  all remaining throwable objects. (checked exceptions are also known as compileTime exceptions.)");
-        System.out.println();
         System.out.println("Goal:");
         System.out.println("All checked exceptions should be handled by the developer within their program");
         System.out.println();
+        System.out.println("Exception Types:");
+        System.out.println("Unchecked Exception = inherit from the \"Error\" || \"RuntimeException\" classes. (unchecked exceptions are also known as runtime exceptions.)");
+        System.out.println("Checked Exception =  all remaining throwable objects. (checked exceptions are also known as compileTime exceptions.)");
         System.out.println();
         System.out.println();
-        System.out.println("Hierarchy:");
+        System.out.println();
+        System.out.println("Exception Hierarchy:     (* = Unchecked Exception, Remainder = Checked Exception)");
         System.out.println();
         System.out.println("Object");
         System.out.println("│  ");
         System.out.println("Throwable");
-        System.out.println("├── Error*");
-        System.out.println("│     ├── VirtualMachineError*");
+        System.out.println("├── Error *");
+        System.out.println("│     ├── VirtualMachineError *");
         System.out.println("│     │     ├── StackOverflowError");
         System.out.println("│     │     ├── OutOfMemory");
         System.out.println("│     │     └── . . .");
@@ -2632,7 +2683,7 @@ public class KuroNote {
         System.out.println("│     └── . . .");
         System.out.println("│  ");
         System.out.println("└── Exception");
-        System.out.println("      ├── RuntimeException*");
+        System.out.println("      ├── RuntimeException *");
         System.out.println("      │     ├── IndexOutOfBoundsException");
         System.out.println("      │     │     └── ArrayIndexOutOfBoundsException");
         System.out.println("      │     ├── IllegalArgumentException");
