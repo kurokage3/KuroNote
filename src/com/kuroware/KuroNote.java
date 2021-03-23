@@ -981,7 +981,8 @@ public class KuroNote {
         System.out.println("│     │     │     ├── JTextField");
         System.out.println("│     │     │     │     └── JPasswordField");
         System.out.println("│     │     │     ├── JTextArea");
-        System.out.println("│     │     │     └── . . .");
+        System.out.println("│     │     │     └── JEditorPane");
+        System.out.println("│     │     │           └── JTextPane");
         System.out.println("│     │     └── . . .");
         System.out.println("│     └── . . .");
         System.out.println("└── . . .");
